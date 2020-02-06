@@ -1,0 +1,71 @@
+stages:
+# ソリューションのビルド
+  - Build
+# デプロイ
+  - Deploy
+
+variables:
+  # trueにするとGitLabRunnerのでバックログが出力されます。
+  CI_DEBUG_TRACE: "false"
+  # ビルド・デプロイ対象のソリューション名
+  SLN: "KinmuSystem"
+  ###########################################
+  # 以下ライブラリの名称
+  ###########################################
+  COMMON: "CommonLibrary"
+  KINMU: "KinmuLibrary"
+  USER: "UserLibrary"
+  VIEW: "View"
+  PDF: "PDFLibrary"
+  ###########################################
+  # 以下SonarQubeの設定
+  ###########################################
+  SONARSCANNER: "SonarScanner.MSBuild.exe"
+  SONARHOST: "http://172.31.34.131:9000"
+  SONARKEY: "KnmSys"
+  REPORT: "coverage.xml"
+
+before_script:
+  - chcp 65001
+
+DebugBuildJob:
+  stage: Build
+  tags:
+    - KnmSys
+  before_script:
+    - chcp 65001
+    - call %SONARSCANNER% begin /d:sonar.host.url=%SONARHOST% /k:%SONARKEY% /v:"1.0" /d:sonar.analysis.mode=preview /d:sonar.gitlab.commit_sha=%CI_COMMIT_SHA% /d:sonar.gitlab.project_id=%CI_PROJECT_PATH% /d:sonar.gitlab.ref_name=%CI_COMMIT_REF_NAME%
+  script:
+    - nuget restore
+    - msbuild "%SLN%".sln /t:rebuild /p:Configuration=Debug
+  after_script:
+    - call %SONARSCANNER% end
+  only:
+    - /^dev\/.*$/
+    - /^fix\/.*$/
+
+ReleaseBuildJob:
+  stage: Build
+  tags:
+    - KnmSys
+  script:
+    - 'nuget restore'
+    - 'msbuild "%SLN%".sln /t:rebuild /p:Configuration=Release'
+  only:
+    - master
+
+DeployJob:
+  stage: Deploy
+  tags:
+    - KnmSys
+  script:
+    - 'nuget restore'
+    - 'msbuild "%SLN%".sln /t:rebuild /p:Configuration=Release'
+    - 'copy /y .\%COMMON%\bin\Release\*.dll .\%VIEW%\bin\'
+    - 'copy /y .\%KINMU%\bin\Release\*.dll .\%VIEW%\bin\'
+    - 'copy /y .\%USER%\bin\Release\*.dll .\%VIEW%\bin\'
+    - 'copy /y .\%PDF%\bin\Release\*.dll .\%VIEW%\bin\'
+    - 'del /f /q /s C:\inetpub\wwwroot\%SLN%\*.*'
+    - 'xcopy /y /i /s .\%VIEW%\*.* C:\inetpub\wwwroot\%SLN%\'
+  only:
+    - master

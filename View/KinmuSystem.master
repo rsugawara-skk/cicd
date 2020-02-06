@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="KinmuSystem.master.cs" Inherits="KinmuSystem.View.KinmuSystem" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <link rel='stylesheet' type='text/css' href='./lib/jquery-ui-1.9.2.custom/css/custom-theme/jquery-ui-1.9.2.custom.css'>
+    <link rel='stylesheet' type='text/css' href='./css/common.css'>
+    <link rel='stylesheet' type='text/css' href='./css/kinmuList.css'>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/vnd.microsoft.icon">
+</head>
+<body>
+    <div class='contents'>
+        <!-- ヘッダータイトル -->
+        <div class='systemName'>
+            <div class='floatLeft navigation'>
+                <span>勤務システム＞
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderPageTitle" runat="server"></asp:ContentPlaceHolder>
+                </span>
+            </div>
+            <div class='floatRight navigation'>
+                <ul>
+                    <li>
+                        <asp:HyperLink NavigateUrl="List.aspx" runat="server"><img alt="" src="./img/16_html.png" />勤務一覧</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink NavigateUrl="Flex.aspx" runat="server"><img alt="" src="img/checking.png" />フレックス確認</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink NavigateUrl="Setting.aspx" runat="server"><img alt="" src="img/16_settings.png" />個人設定</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink NavigateUrl="Logout.aspx" runat="server"><img alt="" src="img/user.png" />サインアウト</asp:HyperLink>
+                    </li>
+                </ul>
+            </div>
+            <div class='clearFloat'></div>
+        </div>
+
+        <!-- ヘッダーメニュー -->
+        <div align='right'>
+            <asp:Label ID="LatestLogin" runat="server" CssClass="fontWeak"></asp:Label>
+        </div>
+
+        <!-- コンテンツ -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

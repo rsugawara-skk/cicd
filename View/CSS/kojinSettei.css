@@ -1,0 +1,23 @@
+div.contentsEditGroup {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding: 3px;
+	border: solid 1px silver;
+	border-radius: 5px;
+	background-color: #f3f3f3;
+}
+
+table.contentsEditGroup {
+	border-collapse: collapse;
+	border-style: none;
+	padding: 0px;
+}
+
+table.contentsEditGroup td{
+	vertical-align: top;
+}
+
+/* 個人入力設定：時間入力テキストボックスレベル3のセレクトボックス、ドロップダウンリストの幅 */
+select.selectWidth {
+	width: 400px;
+}

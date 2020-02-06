@@ -1,0 +1,80 @@
+﻿@page {
+    size: 210mm 297mm;
+    margin: 0;
+}
+
+@media print {
+}
+
+@media screen {
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+    }
+}
+
+/*PDF変換時にデフォルトの余白があるので小さめに作成する*/
+/*A4の大きさは210mm×297mm*/
+
+body {
+    padding: 5mm 10mm 5mm 10mm;
+    font-size: 9pt;
+    font-family: "メイリオ";
+}
+
+td {
+    white-space: nowrap;
+}
+
+.WorkDiaryTitle {
+    font-size: 16pt;
+    text-align: center
+}
+
+/*flexboxには一部しか対応していないため未使用*/
+.WorkDiarySubTitleContainer {
+    font-size: 12pt;
+    overflow: hidden;
+}
+
+.WorkDiarySubTitle {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+
+.WorkDiaryGridView {
+    
+    width: 100%;
+}
+
+.WorkDiaryGridViewHeader {
+    font-weight: 100;
+}
+
+.Date {
+    width: 5%;
+    text-align: left;
+}
+
+.ProjectName {
+    width: 60%;
+    text-align: left;
+}
+
+.Work {
+    width: 25%;
+    text-align: left;
+}
+
+.WorkTime {
+    width: 10%;
+    text-align: right;
+}
+
+.TotalWorkTime {
+    text-align: right;
+}
+

@@ -1,0 +1,148 @@
+
+div#contentsKinmu {
+	margin-bottom: 100px;
+}
+
+table.kinmuTableStyle {
+	border-collapse: collapse;
+	border-style: none;
+	padding: 0px;
+}
+
+.kinmuTableStyle tr {
+	border-top: solid 1px transparent;
+	display: table-row-group;
+}
+
+.kinmuTableStyle tr.even {
+	background-color: #f3f3f3;
+}
+
+.kinmuTableStyle tr.tokkyuKoukyuRow {
+	background-color: silver;
+}
+
+.kinmuTableStyle tr.workOnTokkyuRow {
+	background-color: #dce6f1; /* 薄青色 */
+}
+
+.kinmuTableStyle tr.workOnKoukyuRow {
+	background-color: #f2dcdb; /* 薄紅色 */
+}
+
+.kinmuTableStyle tr.updatedByOthersRow {
+	background-color: #d1ffe8; /* 薄緑色 */
+}
+
+.kinmuTableStyle tr.mishoninRow {
+	background-color: #f0e68c; /* 薄黄色 */
+}
+
+
+/*幅*/
+/*
+.colDay {width: 2em;}
+.colYoubi,
+.colShuku,
+.colKinmuYoteiEYokujitsu,
+.colKinmuKakuteiEYokujitsu {width: 1em;}
+.colNinshoYotei,
+.colNinshoKakutei {width: 4em;}
+.colKinmuYoteiS,
+.colKinmuYoteiE,
+.colKinmuKakuteiS,
+.colKinmuKakuteiE,
+.colRestTotal,
+.colSagyo,
+.colMinashi1,
+.colMinashi2 {width: 5em;}
+.colKiji {width: 20em;}
+.colRuikei {width: 6em;}
+*/
+
+.kinmuTableStyle tr.kinmuHeaderRow {
+	border-top: solid 1px white;
+}
+
+.kinmuTableStyle tr.editTargetRow {
+	border-top: solid 1px gray;
+}
+
+.kinmuTableStyle tr.editFieldRow {
+	background-color: #e0e0e0;
+	border-bottom: solid 1px gray;
+}
+
+.kinmuTableStyle th {
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: white;
+    border-bottom: solid 2px black;
+    border-left: 0;
+    border-right: 0;
+    font-weight: normal;
+    text-align: left;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+.kinmuTableStyle th.headerSmall {
+	color: gray;
+	font-size: small;
+}
+
+.kinmuTableStyle th.headerBlank {
+	border-bottom: solid 2px white;
+}
+
+.kinmuTableStyle td {
+	padding-left: 3px;
+	padding-right: 3px;
+	border-style: none;
+	white-space: nowrap;
+}
+
+.kinmuTableStyle td.usualday {
+	color: gray;
+	font-size: small;
+}
+
+.kinmuTableStyle td.saturday {
+	color: #0000cc; /* 青 */
+	font-size: small;
+}
+
+.kinmuTableStyle td.sunday,
+.kinmuTableStyle td.holiday {
+	color: #cc0000; /* 赤 */
+	font-size: small;
+}
+
+.kinmuTableStyle td.total {
+    text-align: right;
+}
+
+.kinmuTableStyle th.hiddenData,
+.kinmuTableStyle td.hiddenData {
+	display: none;
+}
+
+.editField div {
+	margin: 0px;
+}
+
+.editField tr {
+	border-style: none;
+}
+
+
+
+/* コピー・クリアに使うラジオボタン・チェックボックスの押下できる範囲を
+ * TD領域(セル)全体に広げて、押下しやすくする。
+ */
+.colGroupCopy input[type='radio'],
+.colGroupCopy input[type='checkbox'],
+.colGroupClear input[type='checkbox'] {
+	width: 100%;
+	height: 100%;
+}

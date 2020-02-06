@@ -1,0 +1,190 @@
+* {
+    font-family: "Meiryo UI", "Tahoma", "MS UI Gothic", "ＭＳ Ｐゴシック";
+}
+
+html { /* 縦スクロールバーを常に表示 */
+    overflow-y: scroll;
+}
+
+body {
+    margin-top: 0px;
+    padding-top: 0px;
+    text-align: center;
+    color: black;
+    background-attachment: fixed;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+div.contents {
+    width: 1000px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+div.contentsBlock {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.systemName {
+    padding: 3px;
+    background-color: dimgray;
+    color: white;
+    font-size: small;
+}
+
+div.commonLinkedMessage {
+    background: #FFFFCC;
+    padding: 15px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+input[type='text'].time {
+    ime-mode: disabled;
+    text-align: right;
+    width: 1.5em;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-right: 3px;
+    border: 1px solid #999999;
+    /* border: none; */
+}
+
+input[type='text'].kiji {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 1px solid #999999;
+    /* border: none; */
+    width: 20em;
+}
+
+input[type='text']:disabled {
+    background-color: LightGrey;
+}
+
+.notice {
+    padding: 3px;
+    border: solid 1px silver;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+}
+
+
+.hiddenArea {
+    display: none;
+}
+
+.fontSmall {
+    font-size: small;
+}
+
+.fontGray {
+    color: gray;
+}
+
+.fontWeak {
+    color: gray;
+    font-size: small;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.clearFloat {
+    clear: both;
+}
+
+.floatList ul {
+    margin: 2px;
+    padding: 2px;
+}
+
+.floatList li {
+    float: left;
+    list-style: none;
+    vertical-align: bottom;
+}
+
+.jqButton {
+    font-size: x-small;
+    padding: 0px;
+}
+
+.toolbar {
+    font-size: small;
+    /*
+	padding-left: 7px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border: solid 1px silver;
+	border-radius: 5px;
+	background-color: #f3f3f3;
+	*/
+}
+
+div.navigation a,
+div.navigation a:visited,
+div.navigation a:active {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted white;
+}
+
+    div.navigation a:hover {
+        color: orange;
+        border-bottom: 1px dotted orange;
+    }
+
+div.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+}
+
+    div.navigation ul li {
+        display: inline;
+        margin: 0;
+        padding: 0 10px;
+        border: 0;
+        position: relative;
+    }
+
+/* ツールチップ(他者更新時に、ロールオーバーで更新者名を表示)のフォントサイズ */
+.ui-tooltip {
+    font-size: x-small;
+}
+
+.validaterInfo {
+    color: gray;
+}
+
+.validaterError {
+    color: #cc0000; /* 赤 */
+}

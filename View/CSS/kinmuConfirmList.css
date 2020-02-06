@@ -1,0 +1,141 @@
+/* テーブル全体定義 */
+table th,
+table td {
+font-size: small;
+	padding: 2px;
+	border: solid 1px #A9A9A9;
+	overflow: hidden; /* データが幅を超えたとき非表示に */
+	white-space: nowrap; /* データの折り返しを防止 */
+}
+
+/* フレックス確認一覧データ表示定義 */
+div.contentsKinmuConfirm {
+	height:1000px;
+	width:1200px;
+	overflow-x:auto;
+	text-align: center;
+}
+
+/* フレックス確認一覧テーブル定義 */
+table.kinmuConfirmTableStyle {
+	border: solid 1px #A9A9A9;
+	font-size: 100%;
+	border-collapse: collapse;
+	width: 100px;
+	overflow-x:scroll;
+	border-spacing: 0; /* tableのcellspacing='0'の代わり */
+}
+
+/*** テーブル固定定義START ***/
+/* 外枠定義 */
+div.x_data_area {
+	width: 1000px;
+	overflow: hidden; /* floatさせた要素を内包しているため指定 */
+	border: solid 1px #A9A9A9;
+}
+
+/* ロック部分定義 */
+div.lock_box {
+	float: left;
+	width: 112px;
+}
+
+/* ロック部分テーブル定義 */
+.lockTableWidth {
+	width:112px;
+}
+
+/* 横スクロール部分定義 */
+div.x_scroll_box {
+	float: left;
+	width: 887px;
+	padding: 0px;
+	border-left: none;
+	border-right: solid 1px #A9A9A9;
+	overflow-y: hidden; /* 縦スクロール非表示 */
+	overflow-x: scroll; /* 横スクロール */
+}
+
+/* 横スクロール部分テーブル定義 */
+.scrollTableWidth {
+	width: 1000px;
+}
+/*** テーブル固定定義END ***/
+
+/* ヘッダーセル定義（社員名:タイトル） */
+.kinmuConfirmTableStyle th.shainNameTitle {
+	font-size: small;
+	text-align:center;
+	border: solid 1px #A9A9A9;
+}
+
+/* ヘッダーセル定義（社員名:可変） */
+.kinmuConfirmTableStyle th.shainName {
+	font-size: small;
+	text-align:center;
+	border: solid 1px #A9A9A9;
+}
+
+/* 超勤予測時間セル定義（タイトル） */
+.kinmuConfirmTableStyle td.overKinmuTimeHeaderTitle {
+	font-size: small;
+	text-align: center;
+	border: solid 1px #A9A9A9;
+	padding: 2px;
+}
+
+/* 超勤予測時間セル定義（可変） */
+.kinmuConfirmTableStyle td.overKinmuTimeHeaderRow {
+	font-size: small;
+	text-align: center;
+	border: solid 1px #A9A9A9;
+}
+
+/* 実績セル定義 */
+.kinmuConfirmTableStyle td.jisseki {
+	font-size: small;
+	border: solid 1px #A9A9A9;
+	padding: 2px 5px;
+	background-color: #DCDCDC; /* 薄グレー */
+}
+
+/* 未承認予定セル定義 */
+.kinmuConfirmTableStyle td.notConfirmYotei {
+	font-size: small;
+	border: solid 1px #A9A9A9;
+	padding: 2px 5px;
+	background-color: #f0e68c; /* 薄黄色 */
+}
+
+/* 承認済み予定セル定義 */
+.kinmuConfirmTableStyle td.confirmYotei {
+	font-size: small;
+	border: solid 1px #A9A9A9;
+	padding: 2px 5px;
+	background-color: #FFFAFA; /* 雪色 */
+}
+
+/* カレンダー（平日） */
+.kinmuConfirmTableStyle td.usualday {
+	font-size: small;
+	border: solid 1px #A9A9A9;
+	text-align: right;
+	color: black;
+}
+
+/* カレンダー（土曜） */
+.kinmuConfirmTableStyle td.saturday {
+	font-size: small;
+	border: solid 1px #A9A9A9;
+	text-align: right;
+	color: #0000cc; /* 青 */
+}
+
+/* カレンダー（祝日・日曜） */
+.kinmuConfirmTableStyle td.sunday,
+.kinmuConfirmTableStyle td.holiday {
+	font-size: small;
+	border: solid 1px #A9A9A9;
+	text-align: right;
+	color: #cc0000; /* 赤 */
+}

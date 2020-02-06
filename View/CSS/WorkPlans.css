@@ -1,0 +1,283 @@
+﻿@page {
+    size: 297mm 210mm;
+    margin: 0;
+}
+
+@media print {
+}
+
+@media screen {
+    body {
+        width: 297mm;
+        height: 210mm;
+        margin: 0;
+    }
+}
+
+body {
+    padding: 5mm 10mm 5mm 10mm;
+    font-size: 11pt;
+    font-family: "メイリオ";
+}
+
+
+.Title {
+    text-align: center;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+}
+
+/*flexboxには一部しか対応していないため未使用*/
+.WorkPlansSubTitleContainer {
+    overflow: hidden;
+}
+
+.WorkPlansSubTitle {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+/*テーブル全体の設定*/
+table {
+    border: solid 1pt #000000;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1mm 0 1mm 0;
+    font-size: 8pt;
+}
+
+th {
+    border: solid 1pt #000000;
+    background-color: #bbbbbb;
+    text-align: center;
+}
+
+tr {
+    border: solid 1pt #000000;
+    line-height: 1.1;
+}
+
+td {
+    border: solid 1pt #000000;
+    white-space: nowrap;
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 3.8mm;
+    vertical-align: middle;
+}
+
+/*メインテーブルの設定*/
+.Date {
+    width: 4%;
+    text-align: center;
+}
+
+.Day {
+    width: 4%;
+    text-align: left;
+    padding-left: 2mm;
+    padding-right: 2mm;
+}
+
+.Plan {
+    width: 4%;
+    text-align: center;
+}
+
+.Result {
+    width: 4%;
+    text-align: center;
+}
+
+.OpeningTimeToClosingTimeSchedule {
+    width: 17%;
+    text-align: center;
+}
+
+.OpeningTimeToClosingTimeResult {
+    width: 17%;
+    text-align: center;
+}
+
+.NextDay {
+    width: 3%;
+    text-align: center;
+}
+
+.BreakTime {
+    width: 5%;
+    text-align: right;
+}
+
+.WorkTime {
+    width: 5%;
+    text-align: right;
+}
+
+.Minashi {
+    width: 5%;
+    text-align: right;
+}
+
+
+.WorkTimeTotal {
+    width: 5%;
+    text-align: right;
+}
+
+.Article {
+    width: 27%;
+    text-align: left;
+}
+
+/*合計テーブル*/
+#TotalTable {
+    width: 18%;
+    margin:0 0 0 50.30%;
+}
+
+.TotalTableHeader {
+    width: 16%;
+    border: solid 1pt #000000;
+    text-align: center;
+    background-color: #bbbbbb;
+}
+
+.TotalTableItem {
+    width: 28%;
+    border: solid 1pt #000000;
+    text-align: right;
+}
+
+/*公休労働回数テーブル*/
+
+#KoKyuWorkTable {
+    width: 15%;
+}
+
+.KoKyuWorkTableHeader {
+    width: 60%;
+    border: solid 1pt #000000;
+    text-align: center;
+    background-color: #bbbbbb;
+}
+.KoKyuWorkTableItem {
+    width: 40%;
+    border: solid 1pt #000000;
+    text-align: right;
+}
+
+/*下のテーブルをうまいこと並べる*/
+
+.CalculateTableContainer {
+    overflow: hidden;
+}
+
+.Check36Table1 {
+    float: left;
+    width: 30%;
+}
+
+.Check36Table2 {
+    float: left;
+    width: 15%;
+}
+
+.CalculateTableMargin {
+    float: left;
+    min-height: 1px;
+    width: 3%;
+}
+
+.NenkyuTable {
+    float: left;
+    width: 15%;
+}
+
+.WorkDaysAndTimeTable {
+    float: left;
+    width: 18%;
+}
+
+/*下のテーブルの大きさ調整*/
+/*widthはdiv要素の中での相対的な大きさを示す*/
+
+/*36協定関係*/
+.Check36Header1 {
+    width: 37%;
+    background-color: #bbbbbb;
+    text-align: left;
+}
+
+/*36協定チェック欄（③補正）の高さを目視で調整しました*/
+.Check36Header2 {
+    line-height:5.3;
+}
+
+.Check36Item1 {
+    width: 13%;
+    text-align: right;
+}
+
+.Check36Item2 {
+    width: 50%;
+    text-align: right;
+}
+
+/*年休関係*/
+
+#NenkyuTable {
+    width: 66%;
+    /*目測*/
+    margin-bottom:22pt;
+}
+
+.NenkyuTableHeader {
+
+    background-color: #bbbbbb;
+    text-align: center;
+    border: solid 1pt #000000;
+}
+
+.NenkyuTableItem {
+    
+    text-align: right;
+    border: solid 1pt #000000;
+}
+
+#TokukyuAndKokyuTable {
+    width: 100%;
+}
+
+.TokukyuAndKokyuTableHeader {
+    background-color: #bbbbbb;
+    text-align: center;
+    border: solid 1pt #000000;
+}
+
+.TokukyuAndKokyuTableItem {
+    text-align: right;
+    border: solid 1pt #000000;
+}
+
+/*労働日数・時間関係*/
+#WorkDaysAndTimeTable {
+    width: 100%;
+}
+
+.WorkDaysAndTimeTableHeader {
+    background-color: #bbbbbb;
+    text-align: center;
+    border: solid 1pt #000000;
+}
+
+.WorkDaysAndTimeTableItem {
+    text-align: right;
+    border: solid 1pt #000000;
+}
+
+#HoteiRoudoCheckMessageLabel{
+    color:#FF0000;
+}

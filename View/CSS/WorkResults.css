@@ -1,0 +1,170 @@
+﻿@page {
+    size: 297mm 210mm;
+    margin: 0;
+}
+
+@media print {
+}
+
+@media screen {
+    body {
+        width: 297mm;
+        height: 210mm;
+        margin:0;
+    }
+}
+
+
+body {
+    padding: 5mm 10mm 5mm 10mm;
+    font-size: 11pt;
+    font-family: "メイリオ";
+}
+
+
+.Title {
+    text-align: center;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+}
+
+/*flexboxには一部しか対応していないため未使用*/
+.WorkResultsSubTitleContainer {
+    overflow: hidden;
+}
+
+.WorkResultsSubTitleLong {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.WorkResultsSubTitleShort {
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+
+table {
+    border: solid 1pt #000000;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1mm 0 1mm 0;
+    font-size: 8pt;
+}
+
+th {
+    background-color: #bbbbbb;
+    text-align: center;
+}
+
+tr {
+}
+
+td {
+    white-space: nowrap;
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 3.8mm;
+    vertical-align: middle;
+}
+
+/*メインテーブルの設定*/
+.Date {
+    width: 4%;
+    text-align: center;
+}
+
+.Day {
+    width: 7%;
+    text-align: left;
+    padding-left: 2mm;
+    padding-right: 2mm;
+}
+
+.Plan {
+    width: 4%;
+    text-align: center;
+}
+
+.Result {
+    width: 4%;
+    text-align: center;
+}
+
+.OpeningTimeToClosingTime {
+    width: 19%;
+    text-align: center;
+}
+
+.NextDay {
+    width: 4%;
+    text-align: center;
+}
+
+.BreakTime {
+    width: 7%;
+    text-align: right;
+}
+
+.WorkTime {
+    width: 7%;
+    text-align: right;
+}
+
+
+.WorkTimeTotal {
+    width: 7%;
+    text-align: right;
+}
+
+.Article {
+    width: 37%;
+    text-align: left;
+}
+
+/*下4つの表を横に並べる*/
+/*flexboxには一部しか対応していないため未使用*/
+.WorkResultsCalculateTableContainer {
+    overflow: hidden;
+}
+
+.WorkResultsCalculateTableLong {
+    float: left;
+    width: 27%;
+}
+
+.WorkResultsCalculateTableShort {
+    float: left;
+    width: 20%;
+}
+/*さすがに頭悪くない？ height指定をしないと中身空の場合widthが効かない*/
+.WorkResultsCalculateTableMargin {
+    float: left;
+    min-height: 1px;
+    width: 2%;
+}
+
+/*widthはdiv要素の中での相対的な大きさを示す*/
+.CalculateCategoryShort {
+    width: 80%;
+    background-color: #bbbbbb;
+    text-align: left;
+}
+
+.CalculateNissu {
+    width: 20%;
+    text-align: right;
+}
+
+.CalculateCategoryLong {
+    width: 60%;
+    background-color: #bbbbbb;
+    text-align: left;
+}
+
+.CalculateTime {
+    width: 20%;
+    text-align: right;
+}

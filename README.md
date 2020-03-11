@@ -1,7 +1,4 @@
-# 勤務システムコンバージョン分科会 [![pipeline status](http://172.31.34.130/cnv/knmsys/badges/master/pipeline.svg)](http://172.31.34.130/cnv/knmsys/commits/master)
-
-## GitLabチュートリアル
-http://172.31.34.130/cnv/knmsys/wikis/GitLab%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB
+# CICD 
 
 ## 開発の流れ
 
